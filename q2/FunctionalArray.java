@@ -6,10 +6,17 @@ public class FunctionalArray {
 
   public FunctionalArray(int n) {
     length = n;
-    head = new BinaryTreeNode(0);
-    for (int i = 1; i < n; i++) {
-      set(i, i);
+    head = build(0, n);
+  }
+
+  private BinaryTreeNode build(int index, int n) {
+    if (index > n) {
+      return null;
     }
+    BinaryTreeNode ret = new BinaryTreeNode(0);
+    ret.setLeft(build(2 * index + 1, n));
+    ret.setRight(build(2 * index + 2, n));
+    return ret;
   }
 
   public void set(int index, int value) throws ArrayIndexOutOfBoundsException {
@@ -18,10 +25,11 @@ public class FunctionalArray {
 
     if (index >= length) {throw new ArrayIndexOutOfBoundsException(String.format("Index %d out of bounds of length %d", index, length));}
 
-    while (true) {
+    while (current != null) {
       if (tracker == 1) {
         current.setValue(value);
-        return;}
+        return;
+      }
       else if (tracker % 2 == 0) {current = current.getLeft();} 
       else {current = current.getRight();}
       tracker = tracker / 2;
@@ -35,7 +43,7 @@ public class FunctionalArray {
 
     if (index >= length) {throw new ArrayIndexOutOfBoundsException(String.format("Index %d out of bounds of length %d", index, length));}
 
-    while (true) {
+    while (current != null) {
       if (tracker == 1) {ret = current.getValue(); break;}
       else if (tracker % 2 == 0) {current = current.getLeft();}
       else {current = current.getRight();}
