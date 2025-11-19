@@ -1,11 +1,13 @@
-package q2;
+package q4;
 
 class OOPLinkedList {
-  private OOPLinkedListElement head = null;
+  protected OOPLinkedListElement head = null;
 
   public OOPLinkedList(OOPLinkedListElement head_in) {
     head = head_in;
   }
+
+  public OOPLinkedList() {}
 
   public OOPLinkedListElement getHead() {
     return head;
