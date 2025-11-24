@@ -10,4 +10,6 @@ class Recursion {
     if (n == 0) {return a;}
     return pow(a * a, (n - 1));
   }
+
+  // [James] and then code to actually test this?
 }

@@ -22,3 +22,19 @@ void transpose(float[][] m) {
     }
   }
 }
+
+/*
+ [James] you cannot have code outside of a class in java [well...not like this at least]
+
+ You need to add in the structure of
+
+ public class Matrix }
+
+    ... then add your code here
+    public static float[][] transpose....
+       [return value of float[][] here implies this would not change the original matrix, but return a new one..void is also fine]
+
+
+
+ }
+ */
