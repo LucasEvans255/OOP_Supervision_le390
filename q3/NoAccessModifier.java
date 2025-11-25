@@ -6,6 +6,8 @@ class AccessField {
   }
 }
 
+// [James] I'm not entirely sure what this code is demonstrating. We can discuss in supervision.
+
 public class NoAccessModifier {
   int x = 5;
 

@@ -3,6 +3,20 @@ package q2;
 class OOPLinkedList {
   private OOPLinkedListElement head = null;
 
+  // [James] This constructor makes OOPLinkedListElement visible to the outside world
+    // Worse, it *requires* the outside world to use it to create a list
+  /* Consider instead:
+  public OOPLinkedList() {
+     this(new OOPLinkedListElement());
+  }
+  private OOPLinkedList(OOPLinkedListElement head_in) {
+    head = head_in;
+  }
+
+  Also - this means we have no way to have an empty list, which we do need to support.
+   */
+
+
   public OOPLinkedList(OOPLinkedListElement head_in) {
     head = head_in;
   }

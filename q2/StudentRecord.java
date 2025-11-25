@@ -19,6 +19,7 @@ public class StudentRecord {
     return age;
   }
 
+  // [James] getCollege() for camelCase convention
   public String GetCollege() {
     return college;
   }
