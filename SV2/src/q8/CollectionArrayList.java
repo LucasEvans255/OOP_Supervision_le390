@@ -4,6 +4,9 @@ import java.util.*;
 
 public class CollectionArrayList<E> extends AbstractList<E> {
   // This was the main difficulty I encountered, as Java does not allow the creation of an array of generic types, so I had to use this workaround
+
+    // [James] Yes. In this case I would recommend having array as Objectp[, doing all internal processing as Object, and then just casting to E
+    // in get(), remove() methods
   private E[] array = (E[]) new Object[16];
   private int currentMaxLength = 16;
   private int length = 0;

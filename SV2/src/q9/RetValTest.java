@@ -14,6 +14,9 @@ public class RetValTest {
         return;
       }
     }
+    // [James] Much better to put the error message at the point of creation of the Exception
+      // throw new IllegalStateException("....");
+      // you can then retrieve this when catching the error with e.getMessage()
     throw new IllegalStateException();
   }
 

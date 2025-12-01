@@ -5,6 +5,8 @@ public class NewtonRaphsonSquareRoot {
   public double squareRoot(double x0) {
     if (x0 < 0) {throw new ArithmeticException("Attempting to calculate the square root of a negative number");}
     double xN = x0;
+    // [James] instead of iterations, it is better practice to have some threshold, and terminate once the difference between two
+      // guesses is less than this level (or, when we know we are within this threshold of the answer, which is posible here)
     for (int i = 0; i < iterations; i++) {
       assert xN != 0 : "Newton Raphson method produced xN = 0";
       assert xN > 0 : "Newton Raphson method produced a negative xN";
