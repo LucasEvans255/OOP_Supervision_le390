@@ -10,6 +10,8 @@ public class Point3D implements Comparable<Point3D> {
     this.z = z;
   }
 
+  // [James] perfectly reasonable
+
   @Override
   public int compareTo(Point3D other) {
     int ret = Integer.compare(this.z, other.z);

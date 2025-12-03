@@ -1,5 +1,6 @@
 package SV2.src.q5.Shapes;
 
+// [James] Perfect
 enum ShapeType {
   NONE,
   CIRCLE,

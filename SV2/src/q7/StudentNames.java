@@ -9,6 +9,9 @@ public class StudentNames {
     map.put(name, percentage);
   }
 
+  // [James] as a general point of style this should return List<String>, and the map above should have a type of Map<String, Integer>
+    // unless (as is not the case) it is *important* what type of underlying list is used
+    // This is a classic case of 'code to the interface'
   public ArrayList<String> allNames() {
     ArrayList<String> array = new ArrayList<String>();
 
