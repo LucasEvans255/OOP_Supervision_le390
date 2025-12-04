@@ -1,4 +1,4 @@
-package SV3.src.2022P1Q3;
+package SV3.src.Q3P12022;
 
 public class OptionallyImmutableAssetLocation {
   private String description;
@@ -24,12 +24,12 @@ public class OptionallyImmutableAssetLocation {
      this.identifier = identifier;
   }
 
-  public void setPhi(double phi) {
+  public void setPhi(double phi) throws NoSuchMethodException {
     if (immutable) {throw new NoSuchMethodException();}
     this.phi = phi;
   }
 
-  public void setTheta(double theta) {
+  public void setTheta(double theta) throws NoSuchMethodException {
     if (immutable) {throw new NoSuchMethodException();}
     this.theta = theta;
   }

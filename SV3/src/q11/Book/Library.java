@@ -14,6 +14,7 @@ public class Library {
 
     List<Book> filteredAndSorted = 
       library.stream()
+              // [James] cast to Book is redundant, as that is the type of the Stream
       .filter((Book book) -> book.pages() > 500)
       .sorted(Comparator.comparing(Book::title))
       .collect(Collectors.toList());
